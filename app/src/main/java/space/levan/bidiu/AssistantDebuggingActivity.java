@@ -3,6 +3,7 @@ package space.levan.bidiu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import space.levan.bidiu.tool.ToolBarActivity;
@@ -33,5 +34,16 @@ public class AssistantDebuggingActivity extends ToolBarActivity {
             this.finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    //键盘返回按钮事件
+    public boolean onKeyDown(int KeyCode,KeyEvent event) {
+        if (KeyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent();
+            intent.setClass(AssistantDebuggingActivity.this,MainActivity.class);
+            startActivity(intent);
+            AssistantDebuggingActivity.this.finish();
+        }
+        return true;
     }
 }

@@ -11,6 +11,7 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -74,6 +75,30 @@ public class RecordsWallActivity extends ToolBarActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new RecordWallAdapter(this, records));
 
+    }
+
+    //标题栏返回按钮点击事件
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == android.R.id.home){
+            Intent intent = new Intent();
+            intent.setClass(RecordsWallActivity.this,MainActivity.class);
+            startActivity(intent);
+            this.finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    //键盘返回按钮事件
+    public boolean onKeyDown(int KeyCode,KeyEvent event) {
+        if (KeyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent();
+            intent.setClass(RecordsWallActivity.this,MainActivity.class);
+            startActivity(intent);
+            RecordsWallActivity.this.finish();
+        }
+        return true;
     }
 
     @Override
@@ -191,19 +216,4 @@ public class RecordsWallActivity extends ToolBarActivity {
         }
 
     }
-
-
-    //标题栏返回按钮点击事件
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if(id == android.R.id.home){
-            Intent intent = new Intent();
-            intent.setClass(RecordsWallActivity.this,MainActivity.class);
-            startActivity(intent);
-            this.finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 }

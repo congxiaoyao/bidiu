@@ -140,7 +140,13 @@ public class MainActivity extends Activity{
                     dialog.dismiss();
                 }
             });
-            dia.show();
+            dia.create();
+            AlertDialog dialog = dia.show();
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).
+                    setTextColor(getResources().getColor(R.color.colorTheme));
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).
+                    setTextColor(getResources().getColor(R.color.colorTheme));
+
         }
     };
 }

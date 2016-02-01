@@ -33,17 +33,23 @@ public class RegisterActivity extends ToolBarActivity {
         userAgrTV.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertDialog.Builder(RegisterActivity.this).setTitle("用户协议")
-                        .setMessage("用户协议") //用户协议
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //用户点击确定表示同意用户协议
-                            }
-                        }).show();
+                AlertDialog.Builder dia = new AlertDialog.Builder(RegisterActivity.this);
+                dia.setTitle("用户协议");
+                dia.setMessage("YHXY");
+                dia.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                dia.create();
+                AlertDialog dialog = dia.show();
+                dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE).
+                        setTextColor(getResources().getColor(R.color.colorTheme));
             }
         });
     }
+    
     @Override
     public void setTitleInfo(TitleInfo info) {
         info.title = "注册";
