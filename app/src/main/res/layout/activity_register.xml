@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="?attr/colorPrimary"
+
+        android:fitsSystemWindows="true"
+        android:paddingRight="58dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#fafafa"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/regUserNameET"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/editsharp01"
+        android:hint="请输入邮箱"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <EditText
+            android:id="@+id/smsET"
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/editsharp01"
+            android:hint="请输入验证码"/>
+        <Button
+            android:id="@+id/getSMSBtn"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/editsharp02"
+            android:text="获取验证码"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/rePassWordET"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/editsharp01"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:hint="请输入密码"/>
+    <Button
+        android:id="@+id/regisBtn"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editsharp02"
+        android:text="注册"
+        android:textColor="#FFFFFF"/>
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册代表同意"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/userAgrTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:clickable="true"
+            android:text="用户协议"
+            android:textColor="#FF4081"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="哦≧▽≦y"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

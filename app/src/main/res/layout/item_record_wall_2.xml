@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="118dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_date"
+
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/colorRed"
+            android:text="2015"
+            android:id="@+id/tv_year"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:id="@+id/tv_month"
+            android:text="12/25"
+            android:textColor="@color/colorRed"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="8dp"
+        android:id="@+id/view_line1"
+        android:background="@color/colorGreen"
+        android:layout_toRightOf="@id/ll_date"
+        android:layout_marginLeft="8dp"/>
+
+    <View
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/view_oval"
+        android:layout_below="@id/view_line1"
+        android:background="@drawable/oval"
+        android:layout_toRightOf="@id/ll_date"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:id="@+id/view_line2"
+        android:layout_alignLeft="@id/view_line1"
+        android:layout_below="@id/view_oval"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorRed"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/view_oval"
+        android:layout_marginLeft="11dp"
+        android:layout_alignTop="@id/view_oval"
+        android:textSize="14sp"
+        android:id="@+id/tv_comics_title"
+        android:text="动画标题动画标题"
+        android:textColor="#4a4a4a"
+        android:singleLine="true"/>
+    
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="70dp"
+        android:id="@+id/iv_comics_pic"
+        android:layout_below="@id/tv_comics_title"
+        android:layout_toRightOf="@id/view_line2"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/colorBlue"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/iv_comics_pic"
+        android:layout_marginLeft="7dp"
+        android:layout_alignTop="@id/iv_comics_pic"
+        android:layout_marginTop="4dp"
+        android:layout_alignBottom="@id/iv_comics_pic"
+        android:layout_marginBottom="4dp"
+        android:text="观后感观后感观后感观后感观后感观后感观后感观后感观后感观后感观后感观后感"
+        android:textColor="#929292"
+        android:textSize="12sp"
+        android:singleLine="false"
+        android:id="@+id/tv_impressions" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dedede"
+        android:layout_alignBottom="@id/view_line2"
+        android:layout_alignLeft="@id/iv_comics_pic"
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/iv_comics_pic"
+        android:clickable="true"
+        android:id="@+id/view_clicker"
+        android:background="?android:attr/selectableItemBackground"/>
+
+</RelativeLayout>

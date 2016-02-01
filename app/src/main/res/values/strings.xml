@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bidiu</string>
+    <string name="personal_file">个人档案</string>
+    <string name="assistant_debugging">助手调试</string>
+    <string name="record_wall">记录墙</string>
+    <string name="anime">当前追番</string>
+    <string name="calendar">当前日程</string>
+    <string name="log_out">退出登录</string>
+</resources>

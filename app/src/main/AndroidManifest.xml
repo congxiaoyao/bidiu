@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="space.levan.bidiu" >
+
+    <!--联网权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--主界面-->
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--登录-->
+        <activity android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--注册-->
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--找回密码-->
+        <activity android:name=".RetrievePasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--追番页面-->
+        <activity android:name=".AnimeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--个人档案-->
+        <activity android:name=".PersonalFileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--助手调试-->
+        <activity android:name=".AssistantDebuggingActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--记录墙-->
+        <activity android:name=".RecordsWallActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--收藏-->
+        <activity android:name=".CollectionActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--日历-->
+        <activity android:name=".CalendarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+    </application>
+
+</manifest>
